@@ -1,12 +1,52 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login - Farmácia 24h</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
-    
+
+    <div class="container">
+
+        <div class="tabs">
+            <div class="tab active" onclick="showForm('login')">Login</div>
+            <div class="tab" onclick="showForm('cadastro')">Cadastro</div>
+        </div>
+
+        <!-- LOGIN -->
+        <div id="loginForm">
+            <h2>Login</h2>
+            <input type="text" id="loginUsuario" placeholder="Usuário">
+            <input type="password" id="loginSenha" placeholder="Senha">
+
+            <button onclick="login()">Entrar</button>
+
+            <button class="google">Entrar com Google</button>
+
+            <div id="mensagemSucesso" class="sucesso hidden">
+                ✅ Login realizado com sucesso!
+            </div>
+        </div>
+
+        <!-- CADASTRO -->
+        <div id="cadastroForm" class="hidden">
+            <h2>Cadastro</h2>
+            <input type="text" id="cadastroUsuario" placeholder="Usuário">
+            <input type="email" id="cadastroEmail" placeholder="Gmail">
+            <input type="password" id="cadastroSenha" placeholder="Senha">
+
+            <button onclick="cadastrar()">Cadastrar</button>
+        </div>
+
+    </div>
+
+    <script src="login.js"></script>
+    <link rel="stylesheet" href="styles.css">
 
 </body>
+
 </html>
