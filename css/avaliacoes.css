@@ -1,0 +1,41 @@
+body {
+    font-family: Arial;
+    margin: 20px;
+    background-color: #f4f4f4;
+}
+
+h1, h2 {
+    color: #333;
+}
+
+.form {
+    background: white;
+    padding: 15px;
+    border-radius: 8px;
+    width: 300px;
+}
+
+input, textarea, select {
+    width: 100%;
+    margin-bottom: 10px;
+    padding: 5px;
+}
+
+button {
+    background-color: #28a745;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #218838;
+}
+
+.feedback {
+    background: white;
+    margin-top: 10px;
+    padding: 10px;
+    border-radius: 5px;
+}

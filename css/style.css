@@ -63,3 +63,29 @@ button {
 .hidden {
     display: none;
 }
+
+textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.feedback {
+    margin-top: 10px;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+textarea, select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+}
+
+.feedback {
+    margin-top: 10px;
+    background: #f0f0f0;
+    padding: 10px;
+    border-radius: 10px;
+}

@@ -38,3 +38,7 @@ function login() {
         alert("Erro no login!");
     }
 }
+
+function irAvaliacoes() {
+    window.location.href = "avaliacoes.html";
+}
