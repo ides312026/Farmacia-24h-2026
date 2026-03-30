@@ -1,0 +1,210 @@
+:root {
+  --primary: #1976d2;
+  --primary-dark: #0d47a1;
+  --primary-light: #64b5f6;
+
+  --white: #ffffff;
+  --glass: rgba(255,255,255,0.6);
+  --gray-light: #eef3f8;
+  --text: #1a2a3a;
+
+  --radius: 18px;
+  --shadow: 0 15px 35px rgba(0,0,0,0.15);
+  --transition: all 0.3s ease-in-out;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', Arial, sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(270deg, #1976d2, #64b5f6, #0d47a1);
+  background-size: 600% 600%;
+  animation: gradientMove 10s ease infinite;
+}
+
+.container {
+  width: 90%;
+  max-width: 420px;
+  padding: 30px;
+  border-radius: var(--radius);
+  background: var(--glass);
+  backdrop-filter: blur(12px);
+  box-shadow: var(--shadow);
+  text-align: center;
+  animation: fadeUp 0.7s ease;
+}
+
+h1 {
+  color: var(--primary-dark);
+  margin-bottom: 20px;
+  animation: fadeIn 1s ease;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+input {
+  padding: 12px;
+  border-radius: var(--radius);
+  border: 1px solid #ccc;
+  outline: none;
+  transition: var(--transition);
+}
+
+input::placeholder {
+  transition: 0.3s;
+}
+
+input:focus::placeholder {
+  opacity: 0.4;
+}
+
+input:focus {
+  transform: scale(1.03);
+  border-color: var(--primary);
+  box-shadow: 0 0 12px rgba(25,118,210,0.4);
+}
+
+button {
+  padding: 12px;
+  border: none;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, var(--primary), var(--primary-dark));
+  color: var(--white);
+  font-weight: bold;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+button:hover {
+  transform: translateY(-4px) scale(1.03);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.25);
+}
+
+button:active {
+  transform: scale(0.95);
+}
+
+.resultado {
+  display: none;
+  margin-top: 20px;
+  padding: 20px;
+  border-radius: var(--radius);
+  background: rgba(255,255,255,0.9);
+  animation: fadeUp 0.5s ease;
+}
+
+.status {
+  margin-top: 10px;
+  padding: 10px;
+  border-radius: var(--radius);
+  font-weight: bold;
+  display: inline-block;
+  transition: var(--transition);
+}
+
+.status.preparo {
+  background: #fff3cd;
+  color: #856404;
+  animation: pulse 0.4s;
+}
+
+.status.entrega {
+  background: #bbdefb;
+  color: var(--primary-dark);
+  animation: pulse 0.4s;
+}
+
+.status.entregue {
+  background: #c8e6c9;
+  color: #1b5e20;
+  animation: pulse 0.4s;
+}
+
+.progress-container {
+  width: 100%;
+  height: 10px;
+  background: var(--gray-light);
+  border-radius: 999px;
+  margin-top: 15px;
+  overflow: hidden;
+}
+
+.progress-bar {
+  height: 100%;
+  width: 0%;
+  background: linear-gradient(90deg, var(--primary), var(--primary-dark));
+  border-radius: 999px;
+  position: relative;
+  transition: width 0.6s ease;
+}
+
+.progress-bar::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -60%;
+  width: 60%;
+  height: 100%;
+  background: linear-gradient(
+    120deg,
+    transparent,
+    rgba(255,255,255,0.6),
+    transparent
+  );
+  animation: shine 1.5s infinite;
+}
+
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {opacity: 0;}
+  to {opacity: 1;}
+}
+
+@keyframes pulse {
+  0% {transform: scale(0.95);}
+  50% {transform: scale(1.05);}
+  100% {transform: scale(1);}
+}
+
+@keyframes shine {
+  from {left: -60%;}
+  to {left: 120%;}
+}
+
+@keyframes gradientMove {
+  0% {background-position: 0% 50%;}
+  50% {background-position: 100% 50%;}
+  100% {background-position: 0% 50%;}
+}
+
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 20px;
+  }
+}
