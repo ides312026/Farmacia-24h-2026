@@ -30,6 +30,7 @@ function adicionar() {
     document.getElementById("turno").value = "";
 }
 
+
 function remover(botao) {
     botao.parentNode.parentNode.remove();
 }
