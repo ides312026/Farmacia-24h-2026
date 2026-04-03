@@ -1,15 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login - Farmácia 24h</title>
-    <link rel="stylesheet" href="css/style.css">
+    <title> Manutenção de Funcionários - Farmácia 24H</title>
+    <link rel="stylesheet" href="style.css">
 </head>
-
 <body>
 
-</body>
+    <header>
+        <h2>FARMÁCIA 24H</h2>
+        <nav>
+            <a href="#">Início</a>
+            <a href="#">Estoque</a>
+            <a href="#">Vendas</a>
+            <a href="#" class="ativo">Funcionários</a>
+        </nav>
+    </header>
 
+    <main>
+        <h1>Manutenção de Funcionários</h1>
+
+        <div class="formulario">
+            <input type="text" id="nome" placeholder="Nome">
+            <input type="text" id="cargo" placeholder="Cargo">
+            <input type="text" id="cpf" placeholder="CPF">
+            <input type="text" id="telefone" placeholder="Telefone">
+
+            <select id="turno">
+                <option value="">Turno</option>
+                <option>Manhã</option>
+                <option>Tarde</option>
+                <option>Noite</option>
+            </select>
+
+            <button onclick="adicionar()">Adicionar</button>
+        </div>
+
+        <table>
+            <thead>
+                <tr>
+                    <th>Nome</th>
+                    <th>Cargo</th>
+                    <th>CPF</th>
+                    <th>Telefone</th>
+                    <th>Turno</th>
+                    <th>Ações</th>
+                </tr>
+            </thead>
+            <tbody id="tabela"></tbody>
+        </table>
+    </main>
+
+    <script src="script.js"></script>
+</body>
 </html>
