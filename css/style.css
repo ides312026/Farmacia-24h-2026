@@ -1,0 +1,95 @@
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fff8dc;
+    margin: 0;
+}
+
+/* TOPO */
+header {
+    background-color: #800020;
+    color: white;
+    padding: 15px;
+}
+
+header h2 {
+    margin: 0;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+header nav {
+    margin-top: 10px;
+}
+
+header a {
+    color: yellow;
+    margin-right: 15px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.ativo {
+    border-bottom: 2px solid yellow;
+}
+
+/* CONTEÚDO */
+main {
+    padding: 20px;
+}
+
+h1 {
+    color: #800020;
+    text-align: center;
+}
+
+/* FORMULÁRIO */
+.formulario {
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.formulario input,
+.formulario select {
+    padding: 8px;
+    margin-right: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #800020;
+    border-radius: 5px;
+}
+
+.formulario button {
+    padding: 8px 12px;
+    background-color: yellow;
+    color: #800020;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+/* TABELA */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #800020;
+}
+
+th {
+    background-color: #800020;
+    color: yellow;
+}
+
+th, td {
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    border: 1px solid #ccc;
+}
+
+/* BOTÕES */
+button {
+    cursor: pointer;
+}
+
+button:hover {
+    opacity: 0.9;
+}
