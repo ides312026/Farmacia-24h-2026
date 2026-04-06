@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Cadastro de Clientes</h1>
+    <input id="nome" placeholder="Nome"><br>
+    <input id="cpf" placeholder="CPF"><br>
+    <input id="endereço" placeholder="Endereço"><br>
+    <select id="tipo">
+        <option value="">Tipo de Cliente</option>
+        <option value="Novo">Novo</option>
+        <option value="antigo">Antigo</option>
+    </select><br>
+    <input id="historico" placeholder="Historico de compras"><br>
+    <button onclick="adicionar()">Adicionar Cliente</button>
+    <h2>Lista de clientes</h2>
+    <ul id="Lista"></ul>
+    <script src="script.js"></script>
+</body>
+</html>
