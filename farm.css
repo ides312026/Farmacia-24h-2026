@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #b0bddb;
+    font-family: Arial;
+}
+
+.frase-container {
+    position: relative;
+    overflow: hidden;
+    width: 500px; /* largura do carrossel */
+    height: 24px;
+    margin-left: 40px; /* alinha com o título */
+    margin-top: 10px;
+    padding-left: 50px; /* esse espaço impede que a frase chegue no título */
+}
+
+.Frase {
+    position: absolute;
+    white-space: nowrap;
+    color: white;
+    font-size: 18px;
+    left: 500px; /* começa fora da tela à direita */
+}
+
+#Header {
+    background-color: #303d7e;
+    height: 80px;
+
+    display: flex;
+    align-items: center;
+    padding-left: 20px; /* controla o espaço */
+}
+
+.Titulo {
+    color: white;
+    font-size: 26px;
+    padding-left: 40px;
+}
+
+#Conteudo {
+    background-color: #5978c1;
+    min-height: 590px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#Rodape {
+    background-color: #2a3b8d;
+    height: 80px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
